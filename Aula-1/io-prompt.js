@@ -40,7 +40,7 @@ async function pergunta_user() {
      console.log(`O dobro do seu número favorito é: ${parseInt(numero) * 2}`)
         console.log(`Sua cor favorito é: ${cor}`)
             console.log(`Sua comida favorita é: ${comida}`)
-        prompt_promisse.close()
+        prompt_promisse.close() //--> Commit
      }
 pergunta_user()
 
