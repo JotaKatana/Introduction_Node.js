@@ -14,10 +14,16 @@ const file_OutPath = path.join(process.cwd(), "Aula-1", "texto-com-linhas.txt")
 //--> read = ler
 //--> fs.readFileSync -->Le de forma syncrona o arquivo, ele trava após a leitura e dps volta, poderia utilizar uma forma de pronxys
 //--> readFile + caminho do arquivo
+console.time("manipular arquivos")
+
 fs.readFile(file_path, {}, (erro, dados) => {
     if(erro) {
             console.log(`Erro na leitura do arquivo no caminho ${file_path}`)
             return
+
+//---> Demonstração console.error
+            // console.error(`Erro na leitura do arquivo no caminho ${file_path}`)
+            // return
         }
 //---> Para arrumar os espaçamentos das linhas
         const texto = dados.toString()
@@ -31,5 +37,6 @@ fs.readFile(file_path, {}, (erro, dados) => {
             if (erro) {
                 console.log(`Erro na escrita do arquivo no caminho ${file_OutPath}`)
             }
+            console.timeEnd("manipular arquivos")
         }) //--> /n para pular linha
     }) 

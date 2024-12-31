@@ -13,7 +13,7 @@ const file_path = path.join(process.cwd(), "Aula-1", "texto.txt")
 //--> readFile + caminho do arquivo
 fs.readFile(file_path, {}, (erro, dados) => {
     if(erro) {
-            console.log(`Erro na leitura do arquivo no caminho ${file_path}`)
+            console.error(`Erro na leitura do arquivo no caminho ${file_path}`)
             return
         }
 //---> Para arrumar os espaçamentos das linhas
